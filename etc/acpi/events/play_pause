@@ -1,0 +1,2 @@
+event=cd/play
+action=/etc/acpi/actions/play_pause

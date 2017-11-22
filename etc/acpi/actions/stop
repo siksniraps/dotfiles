@@ -1,0 +1,3 @@
+#!/bin/bash
+source /home/$(w | grep 'i3' | awk {'print $1'})/.xenv
+sudo -u $XUSER XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR playerctl stop

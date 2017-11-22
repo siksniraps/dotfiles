@@ -1,0 +1,2 @@
+event=cd/stop
+action=/etc/acpi/actions/stop
