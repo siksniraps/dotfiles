@@ -10,9 +10,11 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+# input methods
+exec_always --no-startup-id fcitx
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-scale /home/davis/Pictures/wall.jpeg
+exec_always --no-startup-id feh --bg-scale /home/davis/Pictures/wallpapers/wall.jpeg
 # for transperancy
 exec_always --no-startup-id compton --shadow-exclude '!focused' -c --shadow-red 0 --shadow-green 0 --shadow-blue 1 -l -10 -t -10
 # setup keyboard
@@ -57,7 +59,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 bindsym $mod+Tab exec rofi -show window
-
+bindsym $mod+Shift+s exec rofi -show ssh
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications

@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Set path for this user
@@ -15,6 +14,9 @@ export PATH=$PATH:/home/davis/.cabal/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+export ANDROID_HOME=/opt/android-sdk
+
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ll -A'
 alias lx='ll -BX'                   # sort by extension
