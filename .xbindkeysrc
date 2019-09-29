@@ -1,11 +1,35 @@
 # Increase volume
-"pamixer -i 5 && volnoti-show $(pamixer --get-volume)"
+"pamixer -i 2 && volnoti-show $(pamixer --get-volume)"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"pamixer -d 5 && volnoti-show $(pamixer --get-volume)"
+"pamixer -d 2 && volnoti-show $(pamixer --get-volume)"
    XF86AudioLowerVolume
    
 # Toggle mute
 "pamixer -t; if pamixer --get-mute; then volnoti-show -m; else volnoti-show $(pamixer --get-volume); fi"
-   XF86AudioMute    
+   XF86AudioMute
+
+# Increase brightnesS
+"light -A 2 && volnoti-show -s /usr/share/pixmaps/volnoti/display-brightness-symbolic.svg $(light -G)"
+   XF86MonBrightnessUp
+
+# Decrease brightness
+"light -U 2 && volnoti-show -s /usr/share/pixmaps/volnoti/display-brightness-symbolic.svg $(light -G)"
+   XF86MonBrightnessDown
+
+# Audio play/pause
+"playerctl play-pause"
+   XF86AudioPlay
+
+# Audio stop
+"playerctl stop"
+   XF86AudioStop
+
+# Audio previous
+"playerctl previous"
+   XF86AudioPrev
+
+# Audio next
+"playerctl next"
+   XF86AudioNext
